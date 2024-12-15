@@ -1,0 +1,770 @@
+
+:root {
+  --angle: 45deg;
+}
+
+
+
+
+/*styling the header*/
+.header {
+  width: 100%;
+  height: 120px;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  background-color: black;
+background: linear-gradient(var(--angle), #1d1d1d, #383838, #555555);
+
+  padding: 0;
+
+}
+
+.innerheader {
+  width: 100%;
+  margin: 0 auto;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+}
+.logo-container {
+  display: flex;
+  align-items: center; /* Center content inside the container */
+}
+.logo-container h1 {
+ font-family: "Oswald", sans-serif;
+
+}
+
+.logo-container h1 {
+  color:white;
+ font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0; 
+   text-decoration: none;
+}
+
+
+
+.logo-container .my {/* Default styles */
+  font-weight: 800;
+  color: white; /* Blue for MY */
+  transition: color 0.9s ease;
+}
+
+.logo-container .portfolio {
+  font-weight: 800;
+  color: #007BFF; /* blue for PORTFOLIO */
+   transition: font-size 5s ease, font-weight 5s ease, color 1s ease;
+}
+
+/* Swap colors on hover */
+.logo-container:hover .my {
+  color:#007BFF; /* MY changes to blue */
+
+    font-weight: bold; /* Change font weight */
+      font-size: 32px; /* Change font size */
+}
+
+.logo-container:hover .portfolio {
+  color: white; /* PORTFOLIO changes to blue */
+
+}
+
+
+
+.navigation {
+  display: flex; /* Use flexbox for navigation alignment */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation li {
+  margin: 0 10px; /* Adjust spacing between nav items */
+
+}
+.navigation li a {
+  color: white;
+ font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  align-items: center;
+ border: 2px hidden gray;
+ border-radius: 8px;
+ margin: 10px auto; /* Center the box on the page */
+  width: fit-content; /* Adjust width to fit the text */
+  padding: 5px; /* Space inside the box */
+
+
+
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+
+header {
+  animation: dropIn 1s ease-out;
+  position: relative;
+  padding: 20px 0;
+
+
+
+/* Heading hover effect and colours*/
+.logo-container h1 {
+ font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  margin: 0;
+
+
+
+}
+
+
+ul.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+ul.navigation li {
+  display: inline-block;
+
+}
+
+ul.navigation li a {
+  text-decoration: none;
+ font-family: "Oswald", sans-serif;
+  font-weight: 800;
+  color: white;
+  transition: color 0.3s ease;
+
+
+
+
+}
+
+
+
+ul.navigation li a:hover {
+  color: #007BFF; /* Hover color */
+  
+ font-family: "Oswald", sans-serif;
+transition: color 0.7s ease;
+
+
+}
+ 
+ 
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start; /* Adjust alignment for smaller screens */
+  }
+
+  .navigation {
+    margin-top: 10px;
+    flex-direction: column; /* Stack navigation items vertically */
+  }
+}
+
+.navigation a {/* Header navigation links */
+  position: relative; /* For pseudo-element positioning */
+  text-decoration: none;
+  color: #fff; /* Default link color */
+  font-size: 18px;
+  transition: color 0.7s ease; /* Smooth color transition */
+}
+
+.navigation a::after { /* Purple underline hover effect */
+  content: '';
+  position: absolute;
+  bottom: 1px; /* Position the line below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+ background :purple;
+  transition: width 0.7s ease; /* Smooth animation */
+}
+
+.navigation a:hover::after { /* On hover, extend the underline */
+  width: 100%; /* Full width of the link text */
+}
+
+
+.header {
+  background-color: #333; /* Header background color */
+  color: #fff; /* Header text color */
+
+  text-align: center;
+  position: relative; /* Required for pseudo-element positioning */
+  overflow: hidden; /* Prevent animated border overflow */
+}
+
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Aligns the border to the bottom of the header */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Initially scaled down */
+  width: 100%; /* Full width of the header */
+  height: 4px; /* Height of the border */
+  background-color: #007BFF; /* Border color */
+  transition: transform 0.7s ease; /* Smooth animation */
+}
+
+/* On hover, reveal the border */
+.header:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale up to full width */
+}
+
+
+/*end of styling the header*/
+
+
+
+/*Webs body design */
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.bodyslide {
+  animation: slideIn 1s ease-out;
+}
+
+
+/* Titles decoration */
+#title {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 40; 
+  color: #007BFF; 
+  text-align: center; 
+  margin: 10px 0; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  border-bottom: 4px solid purple; 
+  display: inline-block; 
+  padding-bottom: 10px;
+
+}
+
+
+/* boardder divider style */
+
+hr {
+  border: 2px solid #ccc;
+  margin: 20px 5;
+  opacity: 3.0;
+}
+
+
+
+/* Fieldsets--> leave details, Abouts , certificates*/
+
+  fieldset {
+    border-color: purple;
+	 color: black;
+	 background-color: white; 
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  color: white;
+  background-color: #007BFF;  
+  border-color: black;      
+}
+
+
+input[type="text"]:focus,/* Pulse effect once leave detail survey is clicked */
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  color: white; /* Ensure text inside is white */
+  background-color: #007BFF; /* Highlight background color */
+  border-color: purple; /* Dark border */
+  box-shadow: 0 0 10px 2px #007BFF; /* Add glowing blue effect */
+  outline: none; /* Remove default focus outline */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white; /* Set placeholder text color to white */
+  opacity: 1; /* Ensure the placeholder is fully visible */
+}
+
+
+input[type="submit"].button1 {   /* subit button Wiggle animation */
+  
+  animation: wiggle 2s linear infinite;
+}
+input[type="submit"].button1:hover {
+
+}
+
+
+@keyframes wiggle {
+  0%, 50% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes shake {/* Submit button jumps up once you hover */
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(4px); }
+}
+
+input[type="submit"].button1:hover {
+  animation: shake 2s ease;
+}
+
+input[type="submit"].button1:hover {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+table tbody tr {
+    font-weight: 700;
+border: 2px solid transparent;
+ background-color: #f9f9f9; /* Light background for contrast */
+font-style: italic;
+ color: #444; 
+  font-weight: bold; 
+  font-size: 18;
+  
+
+
+
+}
+table tbody tr:hover {
+
+
+font-style: italic;
+ color: white; 
+  font-weight: bold; 
+  font-size: 20;
+  transition: background-color 2s ease, color 0.7s ease, font-weight 0.7s ease; /* Smooth transition for all */
+background: linear-gradient(45deg, #0056b3, #007BFF, #003d80);
+ 
+
+
+}
+
+
+
+tr {
+  text-align: center;
+  position: relative; /* Required for pseudo-element positioning */
+  overflow: hidden; /* Prevent animated border overflow */
+
+
+}
+
+
+td::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Aligns the border to the bottom of the subject */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Initially scaled down */
+  width: 100%; /* Full width of the subject */
+  height: 4px; /* Height of the border */
+  background-color: purple; /* Border color */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+ td:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale up to full width */
+}
+
+
+table tbody tr:hover a {
+  color: white; /* Links turn white */
+  text-decoration: underline; /* Add underline on hover */
+  font-weight: bold; /* Links become bold */
+    
+}
+
+thead{  /* Table heads labeled black */
+
+  background-color: black;
+  background: linear-gradient(var(--angle), #1d1d1d, #383838, #555555);
+  color: white;
+  padding: 5px 0;
+  text-align: center ;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+/* Pictures */
+
+#pics {
+  border: 5px double; #ccc;
+  border-color: linear-gradient(90deg, #68217A 49%, #945EB3 51%, #84009e 52%, #8c00ff 77%); 
+  border-radius: 10px;
+  width: 120px;
+  height: 110px;
+  border-radius: 50%;
+  display: inline-flex;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 10px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background: #f4f4f4;
+   transition: 0.3s ease; /* Smooth transition */
+   border: 5px solid transparent; /* Default border */
+}
+#pics:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  border: linear-gradient(90deg, #68217A 49%, #945EB3 51%, #84009e 52%, #8c00ff 77%); 
+   border: 5px solid purple; /* Purple border on hover */
+  box-shadow: 0 0 10px 4px rgba(128, 0, 128, 0.5); /* Subtle purple glow */
+
+}
+
+
+
+
+/*  End of Pictures */
+
+
+/*  Home page paragraph  */
+
+
+
+body { /* General body styling */
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.portfolio-header {  /* Header styling */  
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 1000;
+  font-size: 25px;
+  font-style: normal; /* 'bold' is handled by font-weight */
+  color: #444; /* Darker shade for contrast */
+  text-align: left;
+  margin-top: 20px;
+
+ border: 2px solid transparent;
+ border-radius: 15px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background for contrast */
+  max-width: 800px;
+   backdrop-filter: blur(5px); /* Optional: Adds a frosted-glass effect */
+     margin: 0px 10px;
+  
+}
+
+
+.portfolio-description {/* Paragraph styling */
+  text-align: left; /* Align text to the left */
+background: #ebebe8;
+  padding: 20px;
+  margin: 40px 0;
+   margin-top: 5px;
+   border-radius: 20px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(5, 4, 3, 4.5); /* Adds a soft shadow for depth */
+    max-width: 800px; /* Centers and limits the section width */
+  line-height: 1.8; /* Improves text readability */
+  backdrop-filter: blur(5px); /* Optional: Adds a frosted-glass effect */
+  font-weight: 600;
+  font-style: italic;
+  font-size: 15px;
+text-align: left; /* Align text to the left */
+  color: #444
+}
+
+
+.portfolio-description a {/* Link styling */
+  color: #3498db; /* Blue for links */
+  text-decoration: none;
+  font-weight: 700;
+ 
+}
+
+
+    
+
+.portfolio-description a:hover {
+  color: #007BFF; /* Darker blue on hover */
+ 
+}
+
+p a{
+  border: 2px solid transparent;
+   border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+
+}
+
+p a {
+   position: relative; /* For pseudo-element positioning */
+  text-decoration: none;
+  color: purple; /* Default link color */
+  transition: color 0.7s ease;
+
+
+}
+
+
+p a:hover {
+  color: #007BFF;
+    transition: color 0.7s ease;
+
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+p a::after { /* Purple underline hover effect */
+  content: '';
+  position: absolute;
+  bottom: 1px; /* Position the line below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+ background :purple;
+  transition: width 0.7s ease; /* Smooth animation */
+}
+
+p a:hover::after { /* On hover, extend the underline */
+  width: 100%; /* Full width of the link text */
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  background: linear-gradient(var(--angle), #1d1d1d, #383838, #555555);
+  color: white;
+  padding: 5px 0;
+  text-align: center ;
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.footer-logo .my {
+  color: white;
+}
+
+.footer-logo .portfolio {
+  color: #007BFF;
+}
+
+.footer-navigation {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  padding: 0;
+  margin: 15;
+}
+
+.footer-navigation li {
+  display: inline-block;
+}
+
+.footer-navigation li a 
+{
+    color: white;
+    text-decoration: none ;
+    font-size: 18px;
+    float: center;
+    transition: color 0.3s ease;
+}
+
+.footer-navigation  {
+border: 1px hidden black;
+box-shadow: 0 10px 5px rgba(0.3, 0.1, 0.2, 0.3);
+border-radius: 10px;
+width: fit-content; /* Adjust width to fit the text */
+padding: 4px; /* Space inside the box */
+}
+
+.footer-navigation li a:hover {
+  color: #007BFF;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #007BFF;
+
+}
+
+.footer-copy {
+  font-size: 17px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+footer-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Space between links */
+}
+
+
+.footer-navigation a { /* Footer navigation links */
+  position: relative; /* For pseudo-element positioning */
+  text-decoration: none;
+  color: #fff; /* Default link color */
+  font-size: 18px;
+  transition: color 0.7s ease; /* Smooth color transition */
+}
+
+
+.footer-navigation a::after {/* Purple underline hover effect */
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position the line below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: purple; /* Purple underline */
+  transition: width 0.7s ease; /* Smooth animation */
+}
+
+
+.footer-navigation a:hover::after {/* On hover, extend the underline */
+  width: 100%; /* Full width of the link text */
+}
+
+.footer {
+  background-color: #333; /* Footer background */
+  color: #fff; /* Footer text color */
+  padding: 20px 0;
+  text-align: center;
+  position: relative; /* Required for pseudo-element positioning */
+  overflow: hidden; /* Prevent the animated border from overflowing */
+}
+
+
+.footer::before { /* Animated top border (initially hidden) */
+  content: '';
+  position: absolute;
+  top: 0; /* Aligns the border to the top of the footer */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Initially scaled down */
+  width: 100%; /* Full width of the footer */
+  height: 4px; /* Height of the border */
+  background-color: #007BFF; /* Border color */
+  transition: transform 0.7s ease; /* Smooth animation */
+}
+
+
+.footer:hover::before { /* On hover, reveal the border */
+  transform: translateX(-50%) scaleX(1); /* Scale up to full width */
+}
+
+
+
+/* end of Footer */
+
+
+
+
+
